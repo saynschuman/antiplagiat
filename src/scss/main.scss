@@ -2,3 +2,50 @@
 @import "includes/_fonts.scss";
 @import "includes/_reset.scss";
 
+header {
+	&.header-simple {
+		background: linear-gradient(to bottom, #fc6076, #ff9944);	
+		padding: 47px 0;
+	}
+	color: #fff;
+	font-size: 16px;
+	nav {
+		padding-top: 5px;
+		ul {
+			li {
+				display: inline-block;
+				margin-right: 32px;
+				text-align: left;
+				&:last-child {
+					margin-right: 0;
+				}
+				a {
+					text-transform: uppercase;
+					color: #fff;
+					font-weight: 700;
+					&:hover {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+	.phone {
+		text-align: right;
+		a {
+			color: #fff;
+			font-size: 24px;
+			font-family: 'PT Sans', sans-serif;
+		}
+	}
+	.logo {
+		a {
+			color: #fff;
+			font-size: 24px;
+			font-family: 'PT Sans', sans-serif;
+			span {
+				font-weight: 700;
+			}
+		}	
+	}
+}
