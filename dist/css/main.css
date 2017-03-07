@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i");
+@font-face {
+  font-family: 'peace-sans';
+  src: url(../fonts/peace-sans/peace_sans.otf); }
+
+body {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
+  line-height: 1.42857143;
+  color: #212121;
+  background-color: #fff; }
