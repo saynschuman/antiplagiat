@@ -3,12 +3,32 @@
 @import "includes/_reset.scss";
 
 header {
+	padding: 47px 0;
+	border-bottom: 1px solid #e0e0e0;
+	background: transparent;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
 	&.header-simple {
 		background: linear-gradient(to bottom, #fc6076, #ff9944);	
-		padding: 47px 0;
+		position: relative;
 	}
 	color: #fff;
 	font-size: 16px;
+	.logo {
+		a {
+			color: #fff;
+			font-size: 24px;
+			font-family: 'PT Sans', sans-serif;
+			transition: .3s;
+			span {
+				font-weight: 700;
+			}
+			&:hover {
+				text-shadow: 1px 1px 3px rgba(0,0,0,.9);
+			}
+		}	
+	}	
 	nav {
 		padding-top: 5px;
 		ul {
@@ -23,9 +43,31 @@ header {
 					text-transform: uppercase;
 					color: #fff;
 					font-weight: 700;
+					position: relative;
+					transition: .3s;
+					&::before {
+						content: '';
+						position: absolute;
+						height: 2px;
+						width: 0;
+						background-color: #fff;
+						bottom: -5px;
+						left: 0;
+						right: 0;
+						margin: auto;
+						transition: .3s;
+					}
 					&:hover {
 						color: #fff;
+						&::before {
+							width: 100%;
+						}	
 					}
+					&.active {
+						&::before {
+							width: 100%;
+						}	
+					}			
 				}
 			}
 		}
@@ -36,16 +78,167 @@ header {
 			color: #fff;
 			font-size: 24px;
 			font-family: 'PT Sans', sans-serif;
+			position: relative;
+			transition: .3s;
+			&::before {
+				content: '';
+				position: absolute;
+				height: 2px;
+				width: 0;
+				background-color: #fff;
+				bottom: 0;
+				left: 0;
+				transition: .3s;
+			}
+			&:hover {
+				&::before {
+					width: 100%;
+				}	
+			}			
 		}
 	}
-	.logo {
-		a {
+}
+main {
+	.main-background-image {
+		background-size: 100%; 
+		z-index: 1;
+		top: 0;
+		height: 517px;
+		width: 100%;
+	}
+	.content {
+		padding-top: 130px;
+		h1 {
+			font-size: 48px;
+			font-family: 'peace-sans', sans-serif; 
 			color: #fff;
-			font-size: 24px;
-			font-family: 'PT Sans', sans-serif;
-			span {
-				font-weight: 700;
+			z-index: 2;
+			position: relative;
+			text-align: center;
+			text-transform: uppercase; 
+			padding: 50px 0 30px;
+		}
+		button {
+			border: none;
+			border-radius: 23px;
+			border: 2px solid #fff;
+			background: transparent; 
+			width: 254px;
+			padding: 12px 0;
+			color: #fff;
+			font-size: 15px;
+			display: block;
+			margin: 0 auto;
+			font-weight: 600;
+			text-transform: uppercase;
+			position: relative;
+			overflow: hidden;
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				top: 0;
+				margin: auto;
+				width: 0;
+				height: 0;
+				background-color: rgba(255,255,255,.1);
+				border-radius: 23px;
+				background-size: 100%;
+				transition: .5s;
+				z-index: 0;
+				opacity: 0;
 			}
-		}	
+			&::before {
+				content: attr(data-value);
+				z-index: 1;
+				position: relative;
+			}
+			&:hover {
+				&::after {
+					height: 100%;
+					width: 100%;
+					transition: .5s;
+					opacity: 1;
+					border-radius: 23px;
+				}
+			}			
+		}
+	}
+	.blocks {
+		.block {
+			position: relative;
+			margin-top: -80px;
+			img {
+				display: block;
+				margin: 0 auto;
+				position: absolute;
+				width: 116px;
+				left: 50%;
+				transform: translateX(-50%);
+				top: -78px;
+				cursor: pointer;
+			}
+			.cont {
+				padding-top: 60px;
+				height: 190px;
+				background-color: #fff;
+				box-shadow: 0 0 8px 2px rgba(0,0,0,.1);
+				border-radius: 8px;
+				.title {
+					font-size: 16px;
+					font-weight: 600;
+					line-height: 1.8;
+					text-align: center;
+				}
+				button {
+					border: none;
+					display: block;
+					position: absolute;
+					width: 100%;
+					max-width: 237px;
+					left: 50%; 
+					transform: translateX(-50%);
+					margin-top: 25px;
+					background-color: #ff9944;
+					color: #fff;
+					padding: 9px 0;
+					font-size: 15px;
+					font-weight: 600;
+					border-radius: 23px;
+					overflow: hidden;
+					&::after {
+						content: '';
+						position: absolute;
+						left: 0;
+						right: 0;
+						bottom: 0;
+						top: 0;
+						margin: auto;
+						width: 0;
+						background-image: url(../img/grad.png);
+						background-size: 100%;
+						transition: .3s;
+						z-index: 0;
+						opacity: 0;
+					}
+					&::before {
+						content: attr(data-value);
+						z-index: 1;
+						position: relative;
+					}
+					&:hover {
+						&::after {
+							height: 100%;
+							width: 100%;
+							transition: .3s;
+							opacity: 1;
+							border-radius: 0;
+						}
+					}
+				}
+			}
+		}
 	}
 }
