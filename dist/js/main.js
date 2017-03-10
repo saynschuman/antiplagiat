@@ -8,4 +8,8 @@
         }
     } catch (err) {};
 
+    $('.adv').masonry({
+	  itemSelector: '.col'
+	});
+
 }(jQuery));
