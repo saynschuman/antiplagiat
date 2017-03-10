@@ -87,12 +87,62 @@ a {
     -webkit-transition: .3s;
     transition: .3s; }
 
+.video-js {
+  width: 100% !important;
+  height: 340px;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.5); }
+
+.vjs-afterglow-skin .vjs-big-play-button:before {
+  content: "\f04b" !important;
+  font-family: FontAwesome !important;
+  font-size: 40px !important;
+  left: 5px !important;
+  top: -1px !important;
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+.vjs-afterglow-skin .vjs-big-play-button {
+  border: 2px solid #fff !important;
+  -webkit-border-radius: 100% !important;
+          border-radius: 100% !important;
+  top: 65% !important;
+  left: 81% !important;
+  -webkit-transition: .3s;
+  transition: .3s; }
+  .vjs-afterglow-skin .vjs-big-play-button:hover::before {
+    font-size: 45px !important;
+    -webkit-transition: .3s;
+    transition: .3s; }
+
+.vjs-afterglow-skin video {
+  background-color: #000 !important;
+  -webkit-border-radius: 10px !important;
+          border-radius: 10px !important; }
+
+.vjs-poster {
+  background-size: cover !important;
+  -webkit-border-radius: 10px !important;
+          border-radius: 10px !important; }
+
+.vjs-afterglow-skin .vjs-poster {
+  opacity: 1 !important; }
+
 h2 {
-  font-size: 24px;
+  font-size: 34px;
   color: #212121;
   text-align: center;
   display: block;
   line-height: 6; }
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #212121;
+  margin-bottom: 10px; }
 
 .col {
   width: 13.9%;
@@ -253,12 +303,14 @@ main .blocks {
       margin: 0 auto;
       position: absolute;
       width: 116px;
-      left: 50%;
-      -webkit-transform: translateX(-50%);
-          -ms-transform: translateX(-50%);
-              transform: translateX(-50%);
+      left: -webkit-calc(50% - 58px);
+      left: calc(50% - 58px);
       top: -78px;
       cursor: pointer; }
+      main .blocks .block img:hover {
+        -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+                transform: scale(1.1); }
     main .blocks .block .cont {
       padding-top: 60px;
       height: 190px;
@@ -331,6 +383,32 @@ main .advantages {
       height: 80px; }
     main .advantages .adv img {
       display: block;
-      margin: 0 auto; }
+      margin: 0 auto;
+      cursor: pointer; }
     main .advantages .adv span {
       display: inline-block; }
+
+main .how-works {
+  padding-bottom: 50px; }
+  main .how-works .look {
+    position: absolute;
+    top: 75px;
+    left: 70px;
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase; }
+  main .how-works .question {
+    position: absolute;
+    top: 167px;
+    left: 70px;
+    font-size: 48px;
+    color: #fff;
+    font-family: 'peace-sans';
+    text-transform: uppercase;
+    max-width: 300px;
+    line-height: 1.2; }
+  main .how-works p {
+    color: #616161;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 0; }
