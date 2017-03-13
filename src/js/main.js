@@ -13,8 +13,16 @@
 	});
 
 	$('video').on('play', function(){
-		$('.look').fadeOut(300);
-		$('.question').fadeOut(300);
+		setTimeout(function(){
+			$('.look').animate({
+				'opacity': 0,
+				left: -200
+			});
+			$('.question').animate({
+				'opacity': 0,
+				left: -200
+			});		
+		}, 200);
 	})
 
 	// $( "main .advantages .adv img" ).hover(
