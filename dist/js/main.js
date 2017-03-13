@@ -25,13 +25,12 @@
 		}, 200);
 	})
 
-	// $( "main .advantages .adv img" ).hover(
-	//   function() {
-	//     $(this).addClass('animated pulse');	       
-	//   }, function() {
-	//     $(this).removeClass('pulse');	       
-	//   }
-	// );	
+	$('.mobile-button').click(function(){
+		$('header nav ul').toggleClass('top0');
+	})
+	$('.close').click(function(){
+		$('header nav ul').toggleClass('top0');
+	})
 
 	new WOW().init();
 

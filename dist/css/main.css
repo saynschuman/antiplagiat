@@ -130,6 +130,12 @@ a {
 .vjs-afterglow-skin .vjs-poster {
   opacity: 1 !important; }
 
+.top0 {
+  margin-top: 0;
+  margin-right: 0;
+  top: -53px;
+  left: 0; }
+
 h2 {
   font-size: 34px;
   color: #212121;
@@ -158,6 +164,8 @@ header {
   z-index: 2;
   color: #fff;
   font-size: 16px; }
+  header .mobile-button {
+    display: none; }
   header.header-simple {
     background: -webkit-gradient(linear, left top, left bottom, from(#fc6076), to(#ff9944));
     background: -webkit-linear-gradient(top, #fc6076, #ff9944);
@@ -175,37 +183,42 @@ header {
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); }
   header nav {
     padding-top: 5px; }
-    header nav ul li {
-      display: inline-block;
-      margin-right: 32px;
-      text-align: left; }
-      header nav ul li:last-child {
-        margin-right: 0; }
-      header nav ul li a {
-        text-transform: uppercase;
-        color: #fff;
-        font-weight: 700;
-        position: relative;
-        -webkit-transition: .3s;
-        transition: .3s; }
-        header nav ul li a::before {
-          content: '';
-          position: absolute;
-          height: 2px;
-          width: 0;
-          background-color: #fff;
-          bottom: -5px;
-          left: 0;
-          right: 0;
-          margin: auto;
+    header nav ul {
+      -webkit-transition: .3s;
+      transition: .3s; }
+      header nav ul .close {
+        display: none; }
+      header nav ul li {
+        display: inline-block;
+        margin-right: 32px;
+        text-align: left; }
+        header nav ul li:last-child {
+          margin-right: 0; }
+        header nav ul li a {
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 700;
+          position: relative;
           -webkit-transition: .3s;
           transition: .3s; }
-        header nav ul li a:hover {
-          color: #fff; }
-          header nav ul li a:hover::before {
+          header nav ul li a::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 0;
+            background-color: #fff;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            -webkit-transition: .3s;
+            transition: .3s; }
+          header nav ul li a:hover {
+            color: #fff; }
+            header nav ul li a:hover::before {
+              width: 100%; }
+          header nav ul li a.active::before {
             width: 100%; }
-        header nav ul li a.active::before {
-          width: 100%; }
   header .phone {
     text-align: right; }
     header .phone a {

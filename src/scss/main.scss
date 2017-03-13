@@ -31,6 +31,9 @@ header {
 	position: absolute;
 	width: 100%;
 	z-index: 2;
+	.mobile-button {
+		display: none;
+	}
 	&.header-simple {
 		background: linear-gradient(to bottom, #fc6076, #ff9944);	
 		position: relative;
@@ -54,6 +57,10 @@ header {
 	nav {
 		padding-top: 5px;
 		ul {
+			transition: .3s;
+			.close {
+				display: none;
+			}
 			li {
 				display: inline-block;
 				margin-right: 32px;
