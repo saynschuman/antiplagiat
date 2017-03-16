@@ -518,8 +518,7 @@ main .pay {
     padding: 0; }
     main .pay .p-b .thumb {
       height: 80px;
-      width: 166px;
-      background-image: url(../img/pay.jpg);
+      width: 100%;
       margin-bottom: 20px;
       -webkit-transition: .5s;
       transition: .5s;
@@ -564,34 +563,8 @@ main .pay {
           opacity: 1;
           -webkit-transition: .5s;
           transition: .5s; }
-      main .pay .p-b .thumb.visa {
-        background-position: 0px 0px; }
-      main .pay .p-b .thumb.mastercard {
-        background-position: -162px 0px; }
-      main .pay .p-b .thumb.qiwi {
-        background-position: -320px 0px; }
-      main .pay .p-b .thumb.maestro {
-        background-position: -483px 0px; }
-      main .pay .p-b .thumb.mts {
-        background-position: -638px 0px; }
-      main .pay .p-b .thumb.prombank {
-        background-position: -834px 0px;
-        width: 193px; }
-      main .pay .p-b .thumb.yandex {
-        background-position: 0px -84px; }
-      main .pay .p-b .thumb.alpha {
-        background-position: -158px -84px; }
-      main .pay .p-b .thumb.post {
-        background-position: -312px -84px; }
-      main .pay .p-b .thumb.megaphone {
-        background-position: -478px -87px; }
-      main .pay .p-b .thumb.beeline {
-        background-position: -643px -87px; }
-      main .pay .p-b .thumb.tinkoff {
-        background-position: -827px -87px;
-        width: 192px; }
 
-main button.more-b {
+main a.more-b {
   text-transform: uppercase;
   height: 40px;
   width: 200px;
@@ -605,13 +578,14 @@ main button.more-b {
           border-radius: 23px;
   display: block;
   margin: auto;
-  padding-top: 4px;
+  padding-top: 11px;
   margin-top: 40px;
   margin-bottom: 40px;
   position: relative;
   overflow: hidden;
-  margin-bottom: 50px; }
-  main button.more-b::after {
+  margin-bottom: 50px;
+  text-align: center; }
+  main a.more-b::after {
     content: '';
     position: absolute;
     left: 0;
@@ -628,11 +602,11 @@ main button.more-b {
     opacity: 0;
     -webkit-border-radius: 23px;
             border-radius: 23px; }
-  main button.more-b::before {
+  main a.more-b::before {
     content: attr(data-value);
     z-index: 1;
     position: relative; }
-  main button.more-b:hover::after {
+  main a.more-b:hover::after {
     height: 100%;
     width: 100%;
     -webkit-transition: .3s;
